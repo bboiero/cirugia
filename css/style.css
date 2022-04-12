@@ -11,12 +11,22 @@
 
 .nav__item{
     margin: 0 0 0 1.5rem;
+    transition: all infinite;
+    font-size: 1rem;
 }
+
+.nav__item:hover{
+    font-size: 1.2rem;
+}
+
+
 
 .list__link{
     text-decoration: none;
-    color: rgb(25, 31, 30);
-    font-weight: bold;
+    transition: all infinite;
+}
+.list__link:hover{
+    font-size: 1.2rem;
 }
 
 .listServ{
@@ -37,7 +47,8 @@
 }
 
 header{
-    background-color: rgb(212, 228, 238);
+  
+    background: linear-gradient(to right, rgb(212, 228, 238), rgb(85, 182, 242)  );
     padding: 0.5rem 0;
     position: sticky;
     top: 0;
@@ -49,6 +60,7 @@ header{
     justify-content: space-around;
     align-content: center;
 }
+
 .logo{
     grid-area: logo;
     justify-self: center;   
@@ -60,9 +72,14 @@ header{
 }
 
 .imageServicio{
-    padding-left: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
+    width:2orem;
+    height: 20rem;
+    justify-self: center;
+    animation-name: aparecer2;
+    animation-iteration-count: initial;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
 }
 
 .backgroundSurgeon{
@@ -123,6 +140,11 @@ footer{
     max-width: 100%;
     height: 15rem;
     border: 0.25rem solid black;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
 }
 
 .main__title{
@@ -152,6 +174,11 @@ footer{
     width: 15rem;
     height: 15rem;
     justify-self: center;
+    animation-name: aparecer;
+    animation-iteration-count: initial;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-delay: 0s;
 }
 
 .producto{
@@ -159,7 +186,11 @@ footer{
     margin-left: 1rem;
     margin-bottom: 1rem;
     max-width: 100%;
-    height: 15rem;    
+    height: 15rem; 
+    transition: all infinite;   
+}
+.producto:hover{
+    transform: scale(1.2, 1.2);
 }
 
 .cardForm{
@@ -181,6 +212,7 @@ footer{
     grid-area: nav;
     list-style: none;
 }
+
 
 .menu{
     display: flex;
@@ -252,6 +284,26 @@ main{
     padding-bottom: 4rem;
 }
 
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes aparecer2{
+    0%{
+        transform: scale(2, 2);
+    }
+    100%{
+        transform: scale(1, 1);
+    }
+}
 
 @media (min-width: 768px){
     .container{
