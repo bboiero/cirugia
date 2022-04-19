@@ -13,6 +13,7 @@
     margin: 0 0 0 1.5rem;
     transition: all infinite;
     font-size: 1rem;
+    color: white;
 }
 
 .nav__item:hover{
@@ -20,14 +21,21 @@
 }
 
 
-
 .list__link{
     text-decoration: none;
     transition: all infinite;
+    color: white;
+}
+
+.footerLink{
+    text-decoration: none;
+    transition: all infinite;
+    color: rgb(20, 16, 16);
 }
 .list__link:hover{
-    font-size: 1.2rem;
+    font-weight: bold;
 }
+
 
 .listServ{
     list-style: square;
@@ -48,7 +56,7 @@
 
 header{
   
-    background: linear-gradient(to right, rgb(212, 228, 238), rgb(85, 182, 242)  );
+    background: linear-gradient(to right, rgb(212, 228, 238), rgb(26, 130, 194)  );
     padding: 0.5rem 0;
     position: sticky;
     top: 0;
@@ -72,7 +80,7 @@ header{
 }
 
 .imageServicio{
-    width:2orem;
+    width:20rem;
     height: 20rem;
     justify-self: center;
     animation-name: aparecer2;
@@ -94,13 +102,8 @@ header{
 }
 
 .backgroundInstrumental{
-    background-image: url(https://image.shutterstock.com/image-photo/medical-blurred-background-600w-467163191.jpg);
-    background-size: cover;
-    height: auto;
-    background-position: center;
-    background-repeat: none;
-    position: relative;
- 
+    background: radial-gradient(rgb(147, 189, 203), rgb(201, 230, 230), rgb(252, 252, 252));
+    
 }
 
 body{
@@ -122,7 +125,7 @@ footer{
 }
 
 .footer{
-    color: rgb(51, 14, 184);
+    color: rgb(8, 6, 16);
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -139,7 +142,6 @@ footer{
     margin-bottom: 1.5rem;
     max-width: 100%;
     height: 15rem;
-    border: 0.25rem solid black;
     animation-name: aparecer;
     animation-iteration-count: initial;
     animation-timing-function: ease;
@@ -173,12 +175,17 @@ footer{
    
     width: 15rem;
     height: 15rem;
-    justify-self: center;
+    padding-bottom: 1rem;
     animation-name: aparecer;
     animation-iteration-count: initial;
     animation-timing-function: ease;
     animation-duration: 1s;
     animation-delay: 0s;
+}
+
+.boxNosotros{
+    display: flex;
+    justify-content: center;
 }
 
 .producto{
@@ -190,7 +197,7 @@ footer{
     transition: all infinite;   
 }
 .producto:hover{
-    transform: scale(1.2, 1.2);
+    transform: scale(1.05, 1.05);
 }
 
 .cardForm{
@@ -263,7 +270,6 @@ main{
     justify-content: center;
     align-content: center;
     gap: 1rem;
-   
     
 }
 
@@ -274,6 +280,7 @@ main{
     gap: 1rem;
     align-items: center;
     justify-items: center;
+    margin-top: 1rem;
 }
 
 .containerCard{
@@ -282,6 +289,28 @@ main{
     justify-content: center;
     padding-top: 4rem;
     padding-bottom: 4rem;
+}
+
+.cardValores{
+    background-color: rgb(227, 223, 223);
+    height: auto;
+    width: 200px;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin: 1rem 1rem 1rem 1rem;
+    border: 0.1rem solid rgb(24, 21, 21);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.cardSection{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 @keyframes aparecer{
@@ -305,6 +334,7 @@ main{
     }
 }
 
+
 @media (min-width: 768px){
     .container{
         min-width: 100vw;
@@ -315,10 +345,10 @@ main{
         margin-top: 1.5rem;
         margin-left: 1.5rem;
         margin-bottom: 1.5rem;
-        margin-right: 1.5rem;
+        margin-right: 3rem;
         max-width: 120%;
         height: 20rem;
-        border: 0.25rem solid black;
+      
     }
 
     .main__title{
@@ -364,17 +394,30 @@ main{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        justify-content: center;
-        align-content: center;
-                      
-    }
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;}
 
     .imageNosotros{
-   
-        width: 20rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
+            width: 20rem;
+            height: 25rem;
+            padding-top: 5rem;
+            justify-self: center;
+    }
+
+    .imageServicio{
+        width:25rem;
         height: 20rem;
         justify-self: center;
-        padding-top: 5rem;
+        animation-name: aparecer2;
+        animation-iteration-count: initial;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        padding-top: 3rem;
     }
 
 
@@ -393,7 +436,9 @@ main{
         justify-items: center;
         padding-left: 1.5rem;
         padding-top: 5rem;
+        
     }
+
     .cardForm{
         background-color: rgb(247, 239, 239);
         width: 20rem;
@@ -403,10 +448,30 @@ main{
         margin: 3rem 0 3rem 0;
         border-radius: 0.5rem;
     }
-    
+
+    .cardValores{
+        background-color: rgb(227, 223, 223);
+        height: auto;
+        width: 200px;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        margin: 1rem 1rem 1rem 1rem;
+        border: 0.1rem solid rgb(24, 21, 21);
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .cardSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1100px){
     .nav {
         visibility: visible;
         display: flex;
@@ -499,10 +564,11 @@ main{
         margin-left: 2rem;
         margin-bottom: 2rem;
         width: 25rem;
-        height: 25rem;
+        height: 30rem;
         padding-top: 5rem;
         justify-self: center;
     }
+    
     .tt{
         display: flex;
         flex-direction: column;
@@ -520,5 +586,23 @@ main{
            padding-left: 3rem;
         margin: 3rem 0 3rem 0;
         border-radius: 0.5rem;
+    }
+
+    .cardSection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: center;
+    }
+    .imageServicio{
+        width:30rem;
+        height: 25rem;
+        justify-self: center;
+        animation-name: aparecer2;
+        animation-iteration-count: initial;
+        animation-timing-function: ease;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        padding-top: 3rem;
     }
 }
